@@ -1,0 +1,161 @@
+
+body{
+    background-color: #072d67;
+    
+}
+.text{
+    color: #C9D1D9;
+}
+  body.menu-open {
+    overflow: hidden;
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C9D1D9;
+    padding: 1rem 2rem;
+    color: white;
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #58A6FF;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+}
+.nav-links li{
+    margin-left: 1.5rem;
+}
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover{
+    color: #58A6FF;
+}
+#mobile-menu.open {
+  max-height: 500px; 
+  opacity: 1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  gap: 1rem;
+}
+
+
+/* Cartas */
+
+.card {
+  position: relative;
+  width: 220px;
+  height: 320px;
+  background: rgba(72, 209, 205, 0.255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  content: "";
+  width: 22%;
+  height: 22%;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.1s;
+}
+
+.card::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.card::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100%  0 15px;
+}
+
+.card:hover::before,
+.card:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+/*Cartas fotos */
+/* Contenedor del slide */
+.photo-slider {
+  position: relative;
+}
+
+/* Cada foto del slide */
+.photo-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+  animation: photoSlide 8s infinite linear;
+}
+
+/* Retraso de cada imagen (4 fotos → 2 segundos cada una) */
+.photo-slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.photo-slide:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.photo-slide:nth-child(3) {
+  animation-delay: 4s;
+}
+
+.photo-slide:nth-child(4) {
+  animation-delay: 6s;
+}
+
+/* Fade in / fade out automático */
+@keyframes photoSlide {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Animación salida */
+.fade-out {
+  opacity: 0;
+  transform: translateY(15px) scale(0.98);
+  filter: blur(2px);
+  transition: all 0.3s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  transition: all 0.4s ease;
+}

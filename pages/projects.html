@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo.ico" type="image/x-icon" />
+    <title>Denis Chavez Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+    <div class="flex-grow">
+<!-- CONTENEDOR del navbar + menú móvil -->
+<div class="relative">
+  <!-- NAVBAR -->
+  <nav class="bg-gray-700 px-4 py-5 flex items-center justify-between z-50">
+    <!-- Logo y título -->
+    <div class="flex items-center space-x-3">
+      <img src="../img/logo.png" alt="Logo" class="w-15 h-12" />
+    </div>
+
+    <!-- Menú de escritorio -->
+    <ul class="hidden md:flex space-x-6 text-white">
+      <li>
+        <a href="../index.html" class="relative group">
+          <span data-i18n="nav.home">Inicio</span>
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="./projects.html" class="relative group">
+          <span data-i18n="nav.projects">Proyectos</span>
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+       <li>
+      <a href="./about.html" class="relative group">
+        <span data-i18n="nav.about">Conóceme</span>
+        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+      </a>
+    </li>
+      <li>
+        <a href="./contacto.html" class="relative group">
+          <span data-i18n="nav.contact">Contacto</span>
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+      <li>
+        <a href="../resume" class="relative group">
+          <span data-i18n="nav.resume">Currículum</span>
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="hidden md:flex items-center gap-2 text-sm text-white">
+      <button id="btn-es" class="px-2 py-1 rounded-md border border-gray-600 hover:bg-gray-700">
+        ES
+      </button>
+      <span class="text-gray-400">|</span>
+      <button id="btn-en" class="px-2 py-1 rounded-md border border-gray-600 hover:bg-gray-700">
+        EN
+      </button>
+    </div>
+
+    <!-- Botón menú hamburguesa -->
+    <div class="md:hidden">
+      <button id="menu-btn" aria-label="Abrir menú" class="text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MENÚ MÓVIL -->
+  <ul id="mobile-menu"
+    class="md:hidden absolute top-full left-0 w-full bg-gray-800 text-white px-6 py-4 space-y-4 
+           transform scale-y-0 opacity-0 transition-all duration-300 origin-top z-40">
+    <li>
+      <a href="../index.html" class="block hover:text-blue-400 transition">
+        <span data-i18n="nav.home">Inicio</span>
+      </a>
+    </li>
+    <li>
+      <a href="./projects.html" class="block hover:text-blue-400 transition">
+        <span data-i18n="nav.projects">Proyectos</span>
+      </a>
+    </li>
+     <li>
+      <a href="./about.html" class="block hover:text-blue-400 transition">
+        <span data-i18n="nav.about">About</span>
+      </a>
+    </li>
+    <li>
+      <a href="./contacto.html" class="block hover:text-blue-400 transition">
+        <span data-i18n="nav.contact">Contacto</span>
+      </a>
+    </li>
+     <li>
+        <a href="../resume" class="block hover:text-blue-400 transition">
+          <span data-i18n="nav.resume">Currículum</span>
+        </a>
+      </li>
+  </ul>
+</div>
+
+
+
+<section id="proyecto" class="bg-gray-900 text-white py-16 px-6">
+
+
+
+  <!-- TÍTULO -->
+  <div class="max-w-6xl mx-auto text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold">
+      <span data-i18n="projects.title">Featured Projects</span>
+    </h2>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+
+    <!-- PROJECT JOB-->
+<div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg 
+hover:scale-105 hover:shadow-[0_0_30px_rgba(34,197,94,0.6)] 
+transition duration-300 group">
+
+  <!-- IMAGEN -->
+  <img src="../img/logomatre.png" 
+       class="w-full h-auto object-cover transition duration-300 group-hover:scale-100">
+
+  <!-- CONTENIDO -->
+  <div class="p-6 space-y-4">
+
+    <!-- BADGE -->
+    <span data-i18n="project.amanda.badge" class="bg-green-500/20 text-green-400 px-2 py-1 text-xs rounded">
+      Real Client
+    </span>
+
+    <!-- TÍTULO -->
+    <h3 ata-i18n="project.amanda.title" data-i18n="project.amanda.title" class="text-xl font-semibold">
+      Amanda Project – Custom Web Solution
+    </h3>
+
+    <!-- DESCRIPCIÓN PRO -->
+    <p data-i18n="project.amanda.desc" class="text-gray-400 text-sm">
+      Developed a real-world web solution for a client, focusing on usability, responsive design, and performance. Implemented frontend and backend features to improve user experience and deliver a functional product.
+    </p>
+
+    <!-- TECH -->
+    <div class="flex flex-wrap gap-2 text-xs">
+      <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded">HTML</span>
+      <span class="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded">CSS</span>
+      <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded">JavaScript</span>
+      <span class="bg-purple-500/20 text-purple-400 px-2 py-1 rounded">Backend</span>
+    </div>
+
+    <!-- BOTONES -->
+    <div class="flex gap-3 pt-2">
+
+      <!-- LIVE -->
+      <a data-i18n="project.amanda.live" href="https://matrescenceandmindtherapy.com/" target="_blank"
+         class="flex-1 text-center bg-green-500 py-2 rounded-lg hover:bg-green-600 transition"> Live Site
+      </a>
+
+      <!-- CASE STUDY -->
+      <a data-i18n="project.amanda.details" href="../doc/Amanda Project.pdf" 
+         class="flex-1 text-center border border-white py-2 rounded-lg hover:bg-white hover:text-black transition">
+         Details
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+    <!-- PROJECT CARD 2 -->
+    <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-[0_0_25px_rgba(59,130,246,0.5)] transition duration-300">
+
+      <img src="../img/LogoMoneyCrab.png" class="w-full h-auto object-cover transition duration-300 group-hover:scale-110">
+
+      <div class="p-6 space-y-4">
+        <h3 class="text-xl font-semibold" data-i18n="project1.title">
+          MoneyCrab Expense Tracker
+        </h3>
+        <p data-i18n="project.money.note" class="text-xs text-gray-500">Demo video available (Spanish)</p>
+
+       <p data-i18n="project.money.desc" class="text-gray-400 text-sm">
+  Built a mobile expense tracking app with secure authentication and real-time data storage using Firebase. Features user login, expense management, and dynamic total calculation.
+</p>
+
+        <!-- TECH -->
+       <div class="flex flex-wrap gap-2 text-xs">
+  <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded">Kotlin</span>
+  <span class="bg-purple-500/20 text-purple-400 px-2 py-1 rounded">Firebase</span>
+  <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded">MVVM</span>
+</div>
+
+        <!-- BUTTONS -->
+        <div class="flex gap-3 pt-10">
+          <a data-i18n="project.money.github" href="https://github.com/DeccXD/MoneyCrab.git" target="_blank"
+             class="flex-1 text-center border border-white py-2 rounded-lg hover:bg-white hover:text-black transition">
+            GitHub
+          </a>
+
+          <a data-i18n="project.money.demo" href="https://www.youtube.com/watch?v=FuFUtHMxf_E" 
+             class="flex-1 text-center bg-blue-500 py-2 rounded-lg hover:bg-blue-600 transition">
+            Demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT CARD 3 -->
+<div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg 
+hover:scale-105 hover:shadow-[0_0_30px_rgba(249,115,22,0.6)] 
+transition duration-300 group flex flex-col h-full">
+
+  <div class="p-6 space-y-4 flex flex-col flex-grow">
+    
+    <img src="../img/security.png" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+    
+
+    <!-- BADGE -->
+    <span  data-i18n="project.infra.badge" class="bg-orange-500/20 text-orange-400 px-2 py-1 text-xs rounded">
+      Infrastructure & Security
+    </span>
+
+    <!-- TITLE -->
+    <h3 data-i18n="project.infra.title" class="text-xl font-semibold">
+      Secure Network & Server Infrastructure
+    </h3>
+
+    <!-- DESCRIPTION -->
+    <p data-i18n="project.infra.desc" class="text-gray-400 text-sm">
+      Designed and configured a secure client-server infrastructure using Linux and Windows Server. Implemented SSH, FTPS, HTTPS, firewall rules, IPv6 networking, and certificate-based security with a custom Certificate Authority (PKI).
+    </p>
+
+    <!-- TECH -->
+    <div class="flex flex-wrap gap-2 text-xs">
+      <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded">Linux</span>
+      <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded">Windows Server</span>
+      <span class="bg-purple-500/20 text-purple-400 px-2 py-1 rounded">SSH</span>
+      <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded">FTPS</span>
+      <span class="bg-pink-500/20 text-pink-400 px-2 py-1 rounded">HTTPS</span>
+      <span class="bg-orange-500/20 text-orange-400 px-2 py-1 rounded">Firewall</span>
+    </div>
+
+    <!-- BUTTON -->
+<div class="mt-auto pt-10">
+  <a  data-i18n="project.infra.case" href="../doc/CaseStudy_DenilsonChavez.pdf"
+     class="block text-center bg-orange-500 py-2 rounded-lg hover:bg-orange-600 transition">
+    Case Study
+  </a>
+</div>
+
+  </div>
+</div>
+
+</section>
+</div>
+
+<footer class="bg-gray-900 text-gray-300 py-10 mt-0">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <!-- Columna 1: Sobre mí -->
+    <div class="md:col-span-1">
+      <h3 class="text-xl font-semibold mb-3" data-i18n="footer.about_title">Sobre mí</h3>
+      <p class="text-sm leading-relaxed" data-i18n="footer.about_text">
+        Desarrollador web y móvil con experiencia en crear soluciones modernas, funcionales y enfocadas en el usuario.
+      </p>
+    </div>
+
+    <!-- Columna 2: Contacto -->
+    <div class="md:col-span-1">
+      <h3 class="text-xl font-semibold mb-3" data-i18n="footer.contact_title">Contacto</h3>
+
+      <ul class="space-y-2 text-sm">
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 5a2 2 0 012-2h2.28a2 2 0 011.95 1.57l.47 2.11a2 2 0 01-.72 2.1l-1.21.88a16.02 16.02 0 007.16 7.16l.88-1.21a2 2 0 012.1-.72l2.11.47A2 2 0 0121 18.72V21a2 2 0 01-2 2h-1C9.82 23 3 16.18 3 7V5z"/>
+          </svg>
+          <span>+1 (214) 813-5649</span>
+        </li>
+
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16 12l-4-4-4 4m8 0l-4 4-4-4"/>
+          </svg>
+          <a href="mailto:decc.cruz.dc@gmail.com" class="hover:text-blue-400 transition">decc.cruz.dc@gmail.com</a>
+        </li>
+
+        <li class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 22s8-4.5 8-12a8 8 0 10-16 0c0 7.5 8 12 8 12z"/>
+          </svg>
+          <span>Texas, USA</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Columna 3: Redes -->
+    <div class="md:col-span-1">
+      <h3 class="text-xl font-semibold mb-3" data-i18n="footer.social_title">Redes sociales</h3>
+
+      <div class="flex gap-3">
+
+        <!-- GitHub -->
+        <a href="https://github.com/DeccXD" target="_blank"
+           class="text-gray-300 hover:text-white transition">
+          <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.69c-2.78.6-3.37-1.34-3.37-1.34a2.65 2.65 0 00-1.1-1.45c-.9-.62.07-.61.07-.61a2.1 2.1 0 011.53 1.03 2.14 2.14 0 002.92.83 2.14 2.14 0 01.64-1.34c-2.22-.25-4.56-1.11-4.56-4.95a3.88 3.88 0 011.03-2.7 3.6 3.6 0 01.1-2.66s.84-.27 2.75 1.02a9.38 9.38 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02a3.6 3.6 0 01.1 2.66 3.88 3.88 0 011.03 2.7c0 3.86-2.34 4.7-4.57 4.95a2.4 2.4 0 01.69 1.86v2.76c0 .26.18.57.69.48A10 10 0 0012 2z"/>
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/denilson-chavez-43a6b436a" target="_blank"
+           class="text-gray-300 hover:text-white transition">
+          <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.09.88 1.98 1.98 1.98 1.1 0 1.98-.89 1.98-1.98A1.99 1.99 0 004.98 3.5zM3.5 8h3v12h-3V8zm7.5 0h2.88v1.72h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6V20h-3v-5.88c0-1.4-.03-3.2-1.96-3.2-1.96 0-2.26 1.53-2.26 3.1V20h-3V8z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/denilson.cruz.dc" target="_blank"
+           class="text-gray-300 hover:text-white transition">
+          <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm5 5a5 5 0 110 10 5 5 0 010-10zm6.5-.25a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
+          </svg>
+        </a>
+
+        <!--Facebook-->
+        <a href="https://facebook.com/emmanuel.cruz.9235199" target="_blank"
+   class="text-gray-300 hover:text-white transition">
+  <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.325v21.351C0 23.403.597 24 1.325 24H12.82v-9.294H9.692V11.41h3.128V8.797c0-3.1 1.893-4.787 4.659-4.787 1.325 0 2.463.099 2.794.142v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.764v2.315h3.587l-.467 3.296h-3.12V24h6.116C23.403 24 24 23.403 24 22.676V1.325C24 .597 23.403 0 22.675 0z"/>
+  </svg>
+</a>
+
+      </div>
+    </div>
+
+    <!-- Columna 4: Idioma -->
+    <div class="md:col-span-1">
+      <h3 class="text-xl font-semibold mb-3" data-i18n="footer.lang_title">Idioma</h3>
+
+      <div class="flex gap-3">
+        <button id="btn-es-footer"
+                class="px-3 py-1 rounded-md border border-gray-600 hover:bg-gray-700">
+          ES
+        </button>
+
+        <button id="btn-en-footer"
+                class="px-3 py-1 rounded-md border border-gray-600 hover:bg-gray-700">
+          EN
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="text-center text-gray-500 text-sm mt-8" data-i18n="footer.rights">
+    © 2025 Denilson Chavez. Todos los derechos reservados.
+  </p>
+</footer>
+
+
+<script src="../js/navbar.js"></script>
+<script src="../js/lang.js"></script>
+</body>
+</html>
